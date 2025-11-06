@@ -7,7 +7,7 @@ function App() {
   return (
 <>
     <Perfil />
-    {'teste'}
+    {'tesdadste'}
 </>
       
   )
