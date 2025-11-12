@@ -9,8 +9,8 @@ import Contato from './components/aula7/FaleConosco';
 const App = () => {
   return (
     <>
-    <NavHeader />
     <BrowserRouter>
+    <NavHeader />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/produto/:id" element={<Product />} />

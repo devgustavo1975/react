@@ -1,6 +1,8 @@
 import { AppBar, Toolbar, Typography, Button, Box } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
 function NavHeader() {
+  const navigate = useNavigate();
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="fixed" color='default'> 
@@ -10,9 +12,7 @@ function NavHeader() {
           </Typography>
           
           <Box>
-            <Button color="inherit">Home</Button>
-            <Button color="inherit">Sobre</Button>
-            <Button color="inherit">Contato</Button>
+            <Button onClick={()=> navigate ('/contato')} color="inherit">Fale conosco</Button>
           </Box>
         </Toolbar>
       </AppBar>
