@@ -9,7 +9,14 @@ const Product = () => {
       .then((response) => setData(response.data))
       .catch((error) => console.error('Error fetching data:', error));
   }, []);
-  return <h1>Produto ID: {id}</h1>;
+  return
+            <Grid size={3} key={index}>
+              <StyledCards
+                id={produto._id}
+                nome={produto.nome}
+                foto={produto.foto}
+              />
+            </Grid>
 };
 
 export default Product;
