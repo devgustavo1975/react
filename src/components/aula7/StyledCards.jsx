@@ -4,25 +4,44 @@ import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { useNavigate } from 'react-router-dom';
+import "./StyledCards.css";
 
 export default function StyledCards({
   id, nome, foto, cargo
 }) {
   const navigate = useNavigate();
+
   return (
-    <Card sx={{ minWidth: 275 }}>
-      <CardContent>
-        <Typography sx={{ color: 'text.secondary', mb: 1.5 }}>adjective
+    <Card className="styled-card" elevation={4}>
+      <CardContent className="styled-card-content">
+        
+        <img 
+          src={foto} 
+          alt={nome} 
+          className="styled-card-image" 
+        />
+
+        <Typography variant="h6" className="styled-card-name">
           {nome}
         </Typography>
-        <img src={`${foto}`}alt=''/>
-        <Typography variant="body2">
+
+        <Typography variant="body2" className="styled-card-role">
           {cargo}
         </Typography>
+
       </CardContent>
-      <CardActions>
-        <Button onClick={() => navigate(`produto/${id}`)} color="inherit">Comprar</Button>
+
+      <CardActions className="styled-card-actions">
+        <Button 
+          onClick={() => navigate(`/product/${id}`)} 
+          variant="contained"
+          className="styled-card-button"
+        >
+          Ver Perfil
+        </Button>
       </CardActions>
     </Card>
   );
 }
+
+
