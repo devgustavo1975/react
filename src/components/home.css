@@ -1,1 +1,26 @@
+.home-container {
+  padding: 40px 60px;
+  background: #f7f9fc;
+  min-height: 100vh;
+}
+
+.home-title {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #1a1a1a;
+  font-family: "Inter", sans-serif;
+}
+
+/* Ajuste de espaçamento e comportamento responsivo */
+@media (max-width: 768px) {
+  .home-container {
+    padding: 20px;
+  }
+
+  .home-title {
+    font-size: 1.8rem;
+  }
+}
 
