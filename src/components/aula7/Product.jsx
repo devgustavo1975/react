@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
-import './Product.css';
+import '../Product.css';
 
 const Product = () => {
   const { id } = useParams();
