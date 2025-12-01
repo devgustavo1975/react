@@ -11,7 +11,7 @@ const Product = () => {
 
   useEffect(() => {
     axios
-      .get(`https://node-vercel-app-rho.vercel.app/api/funcionarios/${id}`)
+      .get(`https://node-vercel-app-rho.vercel.app/api/produtos/${id}`)
       .then((response) => setFuncionario(response.data))
       .catch((error) => console.error("Error fetching data:", error));
   }, [id]);
@@ -22,6 +22,7 @@ const Product = () => {
 
   return (
     <div className="product-container">
+      {console.log(funcionario)}
       <Box component={Paper} elevation={3} className="product-card">
         <div className="product-left">
           <img 
@@ -37,10 +38,9 @@ const Product = () => {
 
           <div className="product-info-box">
             <h3>Informações</h3>
-            <p><strong>ID:</strong> {funcionario._id}</p>
-            <p><strong>Cargo:</strong> {funcionario.cargo}</p>
-            <p><strong>Departamento:</strong> {funcionario.departamento || "Não informado"}</p>
-            <p><strong>Admissão:</strong> {funcionario.admissao || "Não informado"}</p>
+            <p><strong>Descrição:</strong> {funcionario.descricao}</p>
+            <p><strong>Marca:</strong> {funcionario.marca}</p>
+            <p><strong>Preço</strong> {funcionario.preco.valor}</p>
           </div>
         </div>
       </Box>
