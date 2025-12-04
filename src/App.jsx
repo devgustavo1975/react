@@ -1,24 +1,23 @@
-import './App.css'
-import Perfil from './perfil'
-import { BrowserRouter, Routes, Route, useParams } from 'react-router-dom';
-import NavHeader from './components/aula7/Header'
-import Home from './components/aula7/Home'
-import Product from './components/aula7/Product'
-import Contato from './components/aula7/FaleConosco';
+import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import NavHeader from "./components/Header";
+import Home from "./components/Home";
+import Product from "./components/Product";
+import Contato from "./components/FaleConosco";
 
 const App = () => {
   return (
     <>
-    <BrowserRouter>
-    <NavHeader />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/product/:id" element={<Product />} />
-        <Route path="/contato" element={<Contato />} />
-      </Routes>
-    </BrowserRouter>
+      <BrowserRouter>
+        <NavHeader />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/product/:id" element={<Product />} />
+          <Route path="/contato" element={<Contato />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
-}
+};
 
 export default App;
